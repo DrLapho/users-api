@@ -13,25 +13,34 @@
 
   <main class="px-16 py-6 bg-gray-100 md:col-span-2 bg-gray-900">
     <div class="card hover:shadow-lg h-screen " *ngIf="user">
-      <h1 class="text-white text-4xl font-semibold">Personal Details</h1>
-      <h2 class="text-white p-2">Full name : {{ user.name }}</h2>
-      <h2 class="text-white p-2">Username : {{ user.username }}</h2>
-      <h2 class="text-white p-2">Email : {{ user.email }}</h2>
-      <h2 class="text-white p-2">Website : {{ user.website }}</h2>
-      <h2 class="text-white p-2">Phone : {{ user.phone }}</h2>
-
+        <h1 class="text-white text-4xl font-semibold">Personal Details</h1>
+        <div class='p-2'>
+        <h2 class="text-white p-2">Full name : {{ user.name }}</h2>
+        <h2 class="text-white p-2">Username : {{ user.username }}</h2>
+        <h2 class="text-white p-2">Email : {{ user.email }}</h2>
+        <h2 class="text-white p-2">Website : {{ user.website }}</h2>
+        <h2 class="text-white p-2">Phone : {{ user.phone }}</h2>
+        </div>
+      
+        
       <h1 class="text-white text-4xl font-semibold">Company Details</h1>
-      <h2 class="text-white p-2">Company Name : {{ user.company.name }}</h2>
-      <h2 class="text-white p-2">
-        Catch Phrasee : {{ user.company.catchPhrase }}
-      </h2>
-      <h2 class="text-white p-2">B S : {{ user.company.bs }}</h2>
-
+      <div class='p-2'>
+        <h2 class="text-white p-2">Company Name : {{ user.company.name }}</h2>
+        <h2 class="text-white p-2">
+          Catch Phrasee : {{ user.company.catchPhrase }}
+        </h2>
+        <h2 class="text-white p-2">B S : {{ user.company.bs }}</h2>
+      </div>
+      
+     
       <h1 class="text-white text-4xl font-semibold">Address</h1>
-      <h2 class="text-white p-2">Street : {{ user.address.street }}</h2>
-      <h2 class="text-white p-2">Suite : {{ user.address.suite }}</h2>
-      <h2 class="text-white p-2">City : {{ user.address.city }}</h2>
-      <h2 class="text-white p-2">Zip Code : {{ user.address.zipcode }}</h2>
+      <div class="p-2">
+        <h2 class="text-white p-2">Street : {{ user.address.street }}</h2>
+        <h2 class="text-white p-2">Suite : {{ user.address.suite }}</h2>
+        <h2 class="text-white p-2">City : {{ user.address.city }}</h2>
+        <h2 class="text-white p-2">Zip Code : {{ user.address.zipcode }}</h2>
+      </div>
+      
     </div>
     <div class="card hover:shadow-lg h-screen bg-gray-900" *ngIf="!user">
       <h2 class="text-white p-2">Select any option to view details</h2>
