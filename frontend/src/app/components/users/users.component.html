@@ -1,4 +1,4 @@
-<div class='grid md:grid-cols-3'><!-- content wrapper -->
+<div  class='grid md:grid-cols-3' *ngIf="the_users"><!-- content wrapper -->
     <div class='md:col-span-1 m-4 '>
         <div class='mb-5' *ngFor='let user of the_users'>
             <button class="bg-gray-600 w-3/4 text-white hover:bg-gray-300 rounded p-4" (click)='getUser(user.id)'>
@@ -7,8 +7,28 @@
             </div>
     </div>
 
-    <main class='px-16 py-6 bg-gray-100 md:col-span-2 h-screen' >
-        
+    <main class='px-16 py-6 bg-gray-100 md:col-span-2' >
+        <div class='card hover:shadow-lg h-screen bg-gray-900'>
+            <h1 class='text-white p-2 text-3xl underline'>Personal Details</h1>
+            <h2 class='text-white p-2'>Full name : {{user.name}}</h2>
+            <h2 class='text-white p-2'>Username : {{user.username}}</h2>
+            <h2 class='text-white p-2'>Email : {{user.email}}</h2>
+            <h2 class='text-white p-2'>Website : {{user.website}}</h2>
+            <h2 class='text-white p-2'>Phone : {{user.phone}}</h2>
+
+            <h1 class='text-white p-2 text-3xl underline'>Company Details</h1>
+            <h2 class='text-white p-2'>Company Name : {{user.company.name}}</h2>
+            <h2 class='text-white p-2'>Catch Phrasee : {{user.company.catchPhrase}}</h2>
+            <h2 class='text-white p-2'>B S : {{user.company.bs}}</h2>
+
+            <h1 class='text-white p-2 text-3xl underline'>Address</h1>
+            <h2 class='text-white p-2'>Street : {{user.address.street}}</h2>
+            <h2 class='text-white p-2'>Suite : {{user.address.suite}}</h2>
+            <h2 class='text-white p-2'>City : {{user.address.city}}</h2>
+            <h2 class='text-white p-2'>Zip Code : {{user.address.zipcode}}</h2>
+        </div> 
+
+        <h1 class='text-white p-2 text-3xl underline' >Please select an option on the left to start viewing the users</h1>
 
     </main>
 

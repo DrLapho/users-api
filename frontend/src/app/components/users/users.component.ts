@@ -25,8 +25,6 @@ export class UsersComponent implements OnInit {
  getUser(id){
    this.api.getSpecificUser(id).subscribe(data=>{
     this.user = data;
-    console.log(this.user);
-    
    });
    
  }
